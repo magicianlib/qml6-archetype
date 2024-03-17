@@ -1,7 +1,5 @@
 import QtQuick
 
-import "app"
-
 Window {
   width: 640
   height: 480
@@ -11,5 +9,4 @@ Window {
   Head {}
   Body {}
   Footer {}
-
 }

@@ -33,7 +33,8 @@ qt_add_executable(qml6-archetype
 )
 
 set(QML_RESOURCES
-  App.qml
+ app/Window.qml
+
   app/Head.qml
   app/Body.qml
   app/Footer.qml

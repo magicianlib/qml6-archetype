@@ -4,11 +4,14 @@
 int main(int argc, char* argv[]) {
   QGuiApplication app(argc, argv);
 
-  QQmlApplicationEngine engine;
+  QQmlApplicationEngine engine{};
+
   QObject::connect(
       &engine, &QQmlApplicationEngine::objectCreationFailed, &app, []() { QCoreApplication::exit(-1); },
       Qt::QueuedConnection);
-  engine.loadFromModule("qml6-archetype", "App");
+
+  // 加载QML
+  engine.loadFromModule("qml6-archetype", "Window");
 
   return app.exec();
 }
